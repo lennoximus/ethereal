@@ -1,0 +1,32 @@
+{
+  "name": "ethereal",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Yet another renderless UI components library.",
+  "author": {
+    "name": "Leonid Lupenko",
+    "email": "lennoximus@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/lennoximus/ethereal#readme",
+  "bugs": {
+    "url": "https://github.com/lennoximus/ethereal/issues",
+    "email": "lennoximus@gmail.com"
+  },
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sandbox:dev": "vite serve ./sandbox"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "5.2.1",
+    "typescript": "5.7.3",
+    "vite": "6.0.11",
+    "vue": "3.5.13"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "3.14.0",
+    "eslint": "9.18.0"
+  }
+}
