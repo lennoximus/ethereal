@@ -17,7 +17,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sandbox:dev": "vite serve ./sandbox"
+    "sandbox:dev": "vite"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "5.2.1",

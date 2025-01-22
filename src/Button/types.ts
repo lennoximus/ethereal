@@ -5,5 +5,5 @@ export interface ButtonEmits {
 export interface ButtonProps {
   disabled?: boolean
   loading?: boolean
-  nativeType?: 'button' | 'reset' | 'submit'
+  nativeType?: HTMLButtonElement['type']
 }

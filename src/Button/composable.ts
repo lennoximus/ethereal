@@ -1,8 +1,10 @@
+import { computed } from 'vue'
+
 import type { ButtonEmits, ButtonProps } from './types'
 
 export interface UseButtonOptions {
   emits: ButtonEmits
-  props: ButtonProps
+  props: Required<ButtonProps>
 }
 
 export function useButton(options: UseButtonOptions) {
@@ -16,7 +18,14 @@ export function useButton(options: UseButtonOptions) {
     emits('click', event)
   }
 
+  const attrs = computed(() => ({
+    root: {
+      type: props.nativeType,
+    },
+  }))
+
   return {
+    attrs,
     handlers: {
       onClick,
     },

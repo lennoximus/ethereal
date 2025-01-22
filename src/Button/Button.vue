@@ -11,11 +11,11 @@ defineOptions({
 const props = withDefaults(defineProps<ButtonProps>(), BUTTON_PROPS_DEFAULTS)
 const emits = defineEmits<ButtonEmits>()
 
-const { handlers } = useButton({ emits, props })
+const { attrs, handlers } = useButton({ emits, props })
 </script>
 
 <template>
-  <button @click="handlers.onClick">
+  <button v-bind="attrs.root" @click="handlers.onClick">
     <slot />
   </button>
 </template>
