@@ -8,7 +8,10 @@ import { BUTTON_PROPS_DEFAULTS } from './defaults'
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
   args: {
-    ...BUTTON_PROPS_DEFAULTS,
+    disabled: BUTTON_PROPS_DEFAULTS.disabled,
+    icon: BUTTON_PROPS_DEFAULTS.icon(),
+    loading: BUTTON_PROPS_DEFAULTS.loading,
+    nativeType: BUTTON_PROPS_DEFAULTS.nativeType,
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     onClick: fn(),
   },
@@ -28,6 +31,7 @@ const meta = {
         },
         props: {
           disabled: args.disabled,
+          icon: args.icon,
           loading: args.loading,
           nativeType: args.nativeType,
         },
