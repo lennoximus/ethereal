@@ -27,6 +27,13 @@ export function useDivider(options: UseDividerOptions) {
     root: {
       'aria-orientation': ariaOrientation.value,
       'role': props.role,
+      'style': {
+        backgroundColor: props.color,
+        border: 'none',
+        margin: '0',
+        [props.vertical ? 'height' : 'width']: '100%',
+        [props.vertical ? 'width' : 'height']: size.value,
+      },
     },
   }))
 

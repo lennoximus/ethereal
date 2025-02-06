@@ -6,15 +6,28 @@ import EDivider from './Divider.vue'
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
   args: {
-    ...DIVIDER_PROPS_DEFAULTS,
+    color: 'tomato',
+    role: DIVIDER_PROPS_DEFAULTS.role,
+    size: DIVIDER_PROPS_DEFAULTS.size,
+    vertical: DIVIDER_PROPS_DEFAULTS.vertical,
   },
-  argTypes: {},
+  argTypes: {
+    color: {
+      control: 'color',
+      options: ['separator', 'presentation'],
+    },
+    role: {
+      control: 'select',
+      options: ['separator', 'presentation'],
+    },
+  },
   component: EDivider,
   render: (args: any) => ({
     components: { EDivider },
     setup() {
       return {
         props: {
+          color: args.color,
           role: args.role,
           size: args.size,
           vertical: args.vertical,
@@ -22,7 +35,9 @@ const meta = {
       }
     },
     template: `
-      <EDivider v-bind="props"/>
+      <div style="height: 200px;">
+        <EDivider v-bind="props"/>
+      </div>
     `,
   }),
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
@@ -40,4 +55,16 @@ type Story = StoryObj<typeof meta>
  */
 export const Default: Story = {
   args: {},
+}
+
+export const Vertical: Story = {
+  args: {
+    vertical: true,
+  },
+}
+
+export const Thick: Story = {
+  args: {
+    size: '5px',
+  },
 }
