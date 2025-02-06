@@ -18,11 +18,24 @@ export function useButton(options: UseButtonOptions) {
     emits('click', event)
   }
 
-  const attrs = computed(() => ({
-    root: {
-      type: props.nativeType,
-    },
-  }))
+  const attrs = computed(() => {
+    const iconsAttrs = {
+      style: {
+        height: typeof props.icon.height === 'number' ? `${props.icon.height}px` : props.icon.height,
+        width: typeof props.icon.width === 'number' ? `${props.icon.width}px` : props.icon.width,
+      },
+    }
+
+    return ({
+      appendIcon: iconsAttrs,
+      prependIcon: iconsAttrs,
+      root: {
+        disabled: props.disabled,
+        is: 'button',
+        type: props.nativeType,
+      },
+    })
+  })
 
   return {
     attrs,
