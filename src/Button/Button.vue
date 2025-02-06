@@ -16,8 +16,15 @@ const { attrs, handlers } = useButton({ emits, props })
 </script>
 
 <template>
-  <component v-bind="attrs.root" :is="attrs.root.is" @click.stop="handlers.onClick">
-    <span v-if="'prependIcon' in $slots" v-bind="attrs.prependIcon">
+  <component
+    v-bind="attrs.root"
+    :is="attrs.root.is"
+    @click.stop="handlers.onClick"
+  >
+    <span
+      v-if="'prependIcon' in $slots"
+      v-bind="attrs.prependIcon"
+    >
       <slot name="prependIcon" />
     </span>
 
@@ -25,7 +32,10 @@ const { attrs, handlers } = useButton({ emits, props })
       <slot />
     </span>
 
-    <span v-if="'appendIcon' in $slots" v-bind="attrs.appendIcon">
+    <span
+      v-if="'appendIcon' in $slots"
+      v-bind="attrs.appendIcon"
+    >
       <slot name="appendIcon" />
     </span>
   </component>
