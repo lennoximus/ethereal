@@ -22,7 +22,7 @@ export interface ButtonProps {
    */
   loading?: boolean
   /**
-   * The type of the button. Relates to native posible HTML button types variants.
+   * The type of the button. Relates to native possible HTML button types variants.
    * @default 'button'
    */
   nativeType?: HTMLButtonElement['type']
