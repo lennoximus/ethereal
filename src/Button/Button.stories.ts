@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
 import { fn } from '@storybook/test'
+import { computed } from 'vue'
 
 import EButton from './Button.vue'
 import { BUTTON_PROPS_DEFAULTS } from './defaults'
@@ -25,16 +26,19 @@ const meta = {
   render: (args: any) => ({
     components: { EButton },
     setup() {
+      const props = computed(() => ({
+        disabled: args.disabled,
+        icon: args.icon,
+        loading: args.loading,
+        nativeType: args.nativeType,
+      }))
+      const handlers = computed(() => ({
+        click: args.onClick,
+      }))
+
       return {
-        handlers: {
-          click: args.onClick,
-        },
-        props: {
-          disabled: args.disabled,
-          icon: args.icon,
-          loading: args.loading,
-          nativeType: args.nativeType,
-        },
+        handlers,
+        props,
       }
     },
     template: `
