@@ -1,3 +1,3 @@
-export * from './Breadcrumbs'
-export * from './Button'
-export * from './Divider'
+export * from './core/Breadcrumbs'
+export * from './core/Button'
+export * from './core/Divider'
