@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
+import { computed } from 'vue'
+
 import { DIVIDER_PROPS_DEFAULTS } from './defaults'
 import EDivider from './Divider.vue'
 
@@ -25,13 +27,15 @@ const meta = {
   render: (args: any) => ({
     components: { EDivider },
     setup() {
+      const props = computed(() => ({
+        color: args.color,
+        role: args.role,
+        size: args.size,
+        vertical: args.vertical,
+      }))
+
       return {
-        props: {
-          color: args.color,
-          role: args.role,
-          size: args.size,
-          vertical: args.vertical,
-        },
+        props,
       }
     },
     template: `
