@@ -1,8 +1,33 @@
 {
-  "plugins": {
-    "release-it-pnpm": {}
-  },
   "git": {
-    "commitMessage": "Chore: Release ${version}"
+    "tagName": "v${version}",
+    "commitMessage": "Chore(release): v${version}",
+    "tagAnnotation": "v${version}"
+  },
+  "github": {
+    "release": false
+  },
+  "plugins": {
+    "release-it-changelogen": {
+      "templates": {
+        "commitMessage": "Chore(release): v{{newVersion}}",
+        "tagMessage": "v{{newVersion}}",
+        "tagBody": "v{{newVersion}}"
+      },
+      "types": {
+        "Feat": { "title": "🚀 Enhancements", "semver": "minor" },
+        "Perf": { "title": "🔥 Performance", "semver": "patch" },
+        "Fix": { "title": "🩹 Fixes", "semver": "patch" },
+        "Refactor": { "title": "💅 Refactors", "semver": "patch" },
+        "Docs": { "title": "📖 Documentation", "semver": "patch" },
+        "Build": { "title": "📦 Build", "semver": "patch" },
+        "Types": { "title": "🌊 Types", "semver": "patch" },
+        "Chore": { "title": "🏡 Chore" },
+        "Examples": { "title": "🏀 Examples" },
+        "Test": { "title": "✅ Tests" },
+        "Style": { "title": "🎨 Styles" },
+        "CI": { "title": "🤖 CI" }
+      }
+    }
   }
 }

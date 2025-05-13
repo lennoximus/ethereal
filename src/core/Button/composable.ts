@@ -1,6 +1,6 @@
-import { computed } from 'vue'
-
 import type { ButtonEmits, ButtonProps } from './types'
+
+import { computed } from 'vue'
 
 export interface UseButtonOptions {
   emits: ButtonEmits
@@ -30,15 +30,19 @@ export function useButton(options: UseButtonOptions) {
       appendIcon: iconsAttrs,
       prependIcon: iconsAttrs,
       root: {
+        class: 'bg-[#333]',
         disabled: props.disabled,
-        is: 'button',
         type: props.nativeType,
       },
     })
   })
+  const component = computed(() => ({
+    root: 'button',
+  }))
 
   return {
     attrs,
+    component,
     handlers: {
       onClick,
     },

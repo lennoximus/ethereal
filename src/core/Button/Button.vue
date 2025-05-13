@@ -10,19 +10,19 @@ defineOptions({
 
 const props = withDefaults(defineProps<ButtonProps>(), BUTTON_PROPS_DEFAULTS)
 const emits = defineEmits<ButtonEmits>()
-defineSlots<ButtonSlots>()
+const slots = defineSlots<ButtonSlots>()
 
-const { attrs, handlers } = useButton({ emits, props })
+const { attrs, component, handlers } = useButton({ emits, props })
 </script>
 
 <template>
   <component
     v-bind="attrs.root"
-    :is="attrs.root.is"
+    :is="component.root"
     @click.stop="handlers.onClick"
   >
     <span
-      v-if="'prependIcon' in $slots"
+      v-if="'prependIcon' in slots"
       v-bind="attrs.prependIcon"
     >
       <slot name="prependIcon" />
@@ -33,7 +33,7 @@ const { attrs, handlers } = useButton({ emits, props })
     </span>
 
     <span
-      v-if="'appendIcon' in $slots"
+      v-if="'appendIcon' in slots"
       v-bind="attrs.appendIcon"
     >
       <slot name="appendIcon" />

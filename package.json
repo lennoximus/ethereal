@@ -19,7 +19,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "release-it"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "5.2.1",
@@ -40,9 +41,11 @@
     "@storybook/vue3-vite": "^8.5.3",
     "eslint": "9.18.0",
     "eslint-plugin-storybook": "^0.11.2",
-    "release-it": "18.1.2",
+    "release-it": "19.0.2",
+    "release-it-changelogen": "^0.1.0",
     "release-it-pnpm": "4.6.4",
-    "storybook": "^8.5.3"
+    "storybook": "^8.5.3",
+    "unocss": "66.1.0-beta.3"
   },
   "eslintConfig": {
     "extends": [

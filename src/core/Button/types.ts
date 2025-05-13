@@ -29,7 +29,7 @@ export interface ButtonProps {
 }
 
 export interface ButtonSlots {
-  appendIcon: () => any
+  appendIcon?: () => any
   default: () => any
-  prependIcon: () => any
+  prependIcon?: () => any
 }

@@ -1,6 +1,6 @@
-import { computed } from 'vue'
-
 import type { BreadcrumbsProps } from './types'
+
+import { computed } from 'vue'
 
 export interface UseBreadcrumbsOptions {
   props: Required<BreadcrumbsProps>

@@ -20,8 +20,15 @@ const {
 
 <template>
   <ul v-bind="attrs.root">
-    <li v-for="({ text, href }, itemIndex) in breadcrumbsItems" v-bind="attrs.item" :key="text">
-      <a :href="href" v-bind="attrs.itemLink">
+    <li
+      v-for="({ text, href }, itemIndex) in breadcrumbsItems"
+      v-bind="attrs.item"
+      :key="text"
+    >
+      <a
+        :href="href"
+        v-bind="attrs.itemLink"
+      >
         <span v-bind="attrs.itemLinkText">{{ text }}</span>
 
         <meta

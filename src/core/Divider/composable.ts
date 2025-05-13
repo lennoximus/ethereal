@@ -1,6 +1,6 @@
-import { computed } from 'vue'
-
 import type { DividerProps } from './types'
+
+import { computed } from 'vue'
 
 export interface UseDividerOptions {
   props: Required<DividerProps>
