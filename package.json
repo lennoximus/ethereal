@@ -43,7 +43,6 @@
     "eslint-plugin-storybook": "^0.11.2",
     "release-it": "19.0.2",
     "release-it-changelogen": "^0.1.0",
-    "release-it-pnpm": "4.6.4",
     "storybook": "^8.5.3",
     "unocss": "66.1.0-beta.3"
   },
