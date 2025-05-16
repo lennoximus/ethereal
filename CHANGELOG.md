@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.0-beta.3
+
+[compare changes](https://github.com/lennoximus/ethereal/compare/v0.1.0-beta.2...v0.1.0-beta.3)
+
+### 🏡 Chore
+
+- Add changelog geneation support ([89ae9e4](https://github.com/lennoximus/ethereal/commit/89ae9e4))
+
+### ❤️ Contributors
+
+- Leonid Lupenko <lennoximus@gmail.com>
+
 ## v0.1.0-beta.2
 
 [compare changes](https://github.com/lennoximus/ethereal/compare/0.1.0-beta.1...v0.1.0-beta.2)
