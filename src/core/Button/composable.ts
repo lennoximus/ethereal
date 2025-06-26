@@ -26,7 +26,7 @@ export function useButton(options: UseButtonOptions) {
       },
     }
 
-    return ({
+    return {
       appendIcon: iconsAttrs,
       prependIcon: iconsAttrs,
       root: {
@@ -34,7 +34,7 @@ export function useButton(options: UseButtonOptions) {
         disabled: props.disabled,
         type: props.nativeType,
       },
-    })
+    }
   })
   const component = computed(() => ({
     root: 'button',
