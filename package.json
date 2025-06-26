@@ -13,7 +13,11 @@
     "url": "https://github.com/lennoximus/ethereal/issues",
     "email": "lennoximus@gmail.com"
   },
-  "keywords": [],
+  "keywords": [
+    "ui-components",
+    "renderless",
+    "renderless-components"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
