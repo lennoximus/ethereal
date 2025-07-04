@@ -10,7 +10,7 @@ import { BUTTON_PROPS_DEFAULTS } from './defaults'
 const meta = {
   args: {
     disabled: BUTTON_PROPS_DEFAULTS.disabled,
-    icon: BUTTON_PROPS_DEFAULTS.icon(),
+    icon: BUTTON_PROPS_DEFAULTS.icon,
     loading: BUTTON_PROPS_DEFAULTS.loading,
     nativeType: BUTTON_PROPS_DEFAULTS.nativeType,
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args

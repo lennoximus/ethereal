@@ -1,4 +1,6 @@
+import type { BreadcrumbsProps } from './types'
+
 export const BREADCRUMBS_PROPS_DEFAULTS = {
-  items: () => [],
+  items: [],
   separator: '/',
-} as const
+} satisfies BreadcrumbsProps
