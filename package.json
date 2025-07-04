@@ -19,6 +19,11 @@
     "renderless-components"
   ],
   "main": "index.js",
+  "engines": {
+    "node": "20.12.2",
+    "npm": "10.5.0",
+    "bun": "1.2.15"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
