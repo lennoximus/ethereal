@@ -27,3 +27,7 @@ export function getPropsDefaults<PropsKeys extends string, Props extends Record<
         : Props[Key]
     })
 }
+
+export function pixelize(value: number | string) {
+  return typeof value === 'number' ? `${value}px` : value
+}

@@ -1,6 +1,7 @@
 import type { ButtonEmits, ButtonProps } from './types'
-
 import { computed } from 'vue'
+
+import { pixelize } from '../utils'
 
 export interface UseButtonOptions {
   emits: ButtonEmits
@@ -21,8 +22,8 @@ export function useButton(options: UseButtonOptions) {
   const attrs = computed(() => {
     const iconsAttrs = {
       style: {
-        height: typeof props.icon.height === 'number' ? `${props.icon.height}px` : props.icon.height,
-        width: typeof props.icon.width === 'number' ? `${props.icon.width}px` : props.icon.width,
+        height: pixelize(props.icon.height),
+        width: pixelize(props.icon.width),
       },
     }
 

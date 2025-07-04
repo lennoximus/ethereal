@@ -1,6 +1,7 @@
 import type { DividerProps } from './types'
-
 import { computed } from 'vue'
+
+import { pixelize } from '../utils'
 
 export interface UseDividerOptions {
   props: Required<DividerProps>
@@ -21,7 +22,7 @@ export function useDivider(options: UseDividerOptions) {
     return undefined
   })
   const size = computed(() =>
-    typeof props.size === 'number' ? `${props.size}px` : props.size,
+    pixelize(props.size),
   )
   const attrs = computed(() => ({
     root: {
